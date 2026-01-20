@@ -1,0 +1,66 @@
+```groovy
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google() // Access Google Maven repository for Android artifacts.
+        mavenCentral() // Access Maven Central for additional libraries.
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0' // Ensures the latest tools are used for building the app.
+    }
+}
+
+plugins {
+    id 'com.android.application' // Enables Android application features.
+}
+
+android {
+    compileSdkVersion 33 // Using latest SDK for improved performance and features.
+
+    defaultConfig {
+        applicationId "com.madhub.facebookaccountwarmi" // Unique identifier for the application.
+        minSdkVersion 21 // Defines minimum SDK for broad compatibility.
+        targetSdkVersion 33 // Ensures the app is optimized for latest Android features.
+        versionCode 1 // Initial version code for the app.
+        versionName "1.0.0" // Initial version name for the app.
+        resConfigs "en" // Specifies language configuration to enhance user experience.
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // Disables code shrinking, improving build efficiency initially.
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // Ensures best code optimization.
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.0' // Enhances app performance with Kotlin extensions.
+
+    implementation 'com.google.android.material:material:1.6.1' // Provides UI components improving user experience.
+
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Ensures compatibility, boosting reliability across devices.
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // Simplifies network calls, improving efficiency and speed.
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // Streamlines JSON parsing, enhancing data handling capabilities.
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0' // Logs HTTP requests, improving debugging efficiency.
+
+    // Dependency for managing social media interactions
+    implementation 'com.madhub:mad-hub-sdk:1.0.0' // Enables automation features for 24/7 operations across platforms like Facebook, enhancing account management capabilities.
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.0' // Improves lifecycle management, increasing performance reliability.
+}
+
+// The above configuration supports an efficient workflow for developing a robust social media management tool. 
+// With MadHub’s features, users can expect improved operational efficiency, enhanced automations, and superior user engagement across platforms.
+``` 
+
+### Key Outcomes and Benefits:
+- **Improved Performance**: By using the latest SDK and libraries, the application benefits from optimized performance and reduced loading times.
+- **Enhanced User Experience**: Dependencies like Material Design components and AppCompat ensure a modern UI that meets user expectations.
+- **Efficiency Gains**: The use of Retrofit and OkHttp enhances network operations, allowing seamless integration with social media platforms.
+- **24/7 Automation**: Incorporating MadHub SDK empowers users to manage social media accounts efficiently without constant manual intervention. 
+
+This build configuration is tailored to maximize the application's potential in managing Facebook accounts through automation, leading to measurable efficiency improvements and operational success.
